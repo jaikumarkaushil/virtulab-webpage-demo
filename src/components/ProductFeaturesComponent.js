@@ -9,18 +9,18 @@ const RenderFeatures = ({featureTab}) => Features.filter((product) => product.fe
     return(
         <div key={product.id} className="features">
             <Row>
-                <Col xs={6} className="d-flex flex-row justify-content-center">
+                <Col xs={12} md={6}  className="d-md-flex flex-row justify-content-center">
                     <img src="assets/images/ConceptFeature_1.png" alt="concept_1"/>
                 </Col>
-                <Col xs={6} style={{paddingRight: "31px"}}>
+                <Col xs={12} md={6} style={{paddingRight: "31px"}}>
                     <p className="featureNumber">0{product.id + 1}</p>
                     <div className="featureContent">
                         <ul><li>{product.feature}</li></ul>
                         <p className="para-text pl-3">{product.description}</p>
                     </div>
                     <div className="buttons">
-                        <button className="headerbutton-white mr-2">{product.buttonContent_1}</button>
-                        <button className="headerbutton-white ml-2">{product.buttonContent_2}</button>
+                        <button className="headerbutton-white mr-md-2">{product.buttonContent_1}</button>
+                        <button className="headerbutton-white ml-md-2">{product.buttonContent_2}</button>
                     </div>
                 </Col>
             </Row>

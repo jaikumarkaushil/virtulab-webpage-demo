@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { FormGroup, Row, Col } from 'reactstrap';
+import { FormGroup, Col } from 'reactstrap';
 
 
 function Contact () {
@@ -11,7 +11,7 @@ function Contact () {
     };
 
     return (
-        <section id="contact" className="d-flex flex-column justify-content-center align-items-center">
+        <section id="contact" className="d-none d-md-flex flex-column justify-content-center align-items-center">
             
             <div className="side-stand">
                 <img src="assets/images/contact-stand.png" alt="stand.png" />

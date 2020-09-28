@@ -64,15 +64,14 @@ class Application extends Component {
                 )
             },
             customPaging: function(i) {
-                console.log(i + " i", this.currentSlide + " current")
                 return (
                         <button className={i === this.currentSlide ? "tab-link-active" : "tab-link"}>{Applications[i].application}</button>
                 );
-            }
+            }            
         };
         
         return (
-            <section id="applications">
+            <section id="applications" className="d-none d-md-block">
                 <div className="applications-ellipse"></div>
                 <p className="heading">One Robot. Countless Application</p>
                 <hr className="hr-line"/>

@@ -8,7 +8,7 @@ function Partners() {
         )
     })
     return (
-        <section id="globalPartners">
+        <section id="globalPartners" className="d-none d-md-block">
             <p className="heading">Globally Trusted</p>
             <div className="subheading text-center">
                 <p>With 12,000+ robots used worldwide, Double is a world leader in telepresence robots.</p>

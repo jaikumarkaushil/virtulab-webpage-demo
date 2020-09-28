@@ -18,7 +18,7 @@ class FAQ extends Component {
     render() {
         const {collapse} = this.state;
         return (
-            <section id="FAQs"> 
+            <section id="FAQs" className="d-none d-md-block"> 
                 <p className="heading pb-5">FAQs</p>
                 <img src="assets/images/design.png" alt="design" />
                 {FAQs.map((faq,index) => {

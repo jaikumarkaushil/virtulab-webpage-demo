@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 function Footer(props) {
     return(
-    <div id="footer">
+    <div id="footer" className="d-none d-md-block">
             <div className="row justify-content-center m-0">             
                 <div className="col-6 d-flex align-items-center justify-content-around">
                     <img src="assets/images/VirtuLab2.png" alt="logo.png" />

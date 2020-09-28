@@ -36,14 +36,13 @@ function UserSpeaks() {
         },
         customPaging: function(i) {
             return (
-                    <button className={i === slide.currentSlide ? "users-dots-class-active" : "users-dots-class"}></button>
+                    <button className={i === slide.currentSlide ? "customized-dots-class-active" : "customized-dots-class"}></button>
             );
         }
         
     };
-    // console.log(slide.currentSlide);
     return (
-        <section id="users-speak">
+        <section id="users-speak" className="d-none d-md-block">
             <Slider {...settings}>
                 {UsersSpeak.map((userspeak) => {
                     return (
