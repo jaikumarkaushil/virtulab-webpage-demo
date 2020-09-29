@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Carousels } from '../shared/carousels';
 import { Row, Col } from 'reactstrap';
-import ReactCursorPosition from 'react-cursor-position';
 import { findDOMNode } from 'react-dom';
 
 function NextArrow(props) {
