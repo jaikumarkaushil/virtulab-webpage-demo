@@ -376,7 +376,7 @@ z-index: -2;
   }
   .photo-stand {
     /* position */
-    top: -365px;
+    top: 230px;
     left: 35%;
   }
   .photo-stand-bottom img {
@@ -392,7 +392,7 @@ z-index: -2;
   }
   .ellipse-photo-stand-bottom {
     /* position */
-    top: -180px;
+    top: 200px;
     left: 30%;
     /* size */
     width: 148.27px;
@@ -451,7 +451,7 @@ z-index: -2;
 
 /* use-cases */
 #use-cases {
-  margin: -91px 110px 0;
+  margin: -91px auto 0 110px;
 }
 .use-case-cards {
   margin-top: 40.5px;
@@ -586,6 +586,7 @@ align-items: center;
 
 @media screen and (max-width:576px) {
   #use-cases {
+    margin-top:-40px;
     margin-left: 20px;
     padding-right:20px;
     overflow: hidden;

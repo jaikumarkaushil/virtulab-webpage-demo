@@ -9,7 +9,6 @@ class Header extends Component {
 
     this.toggleModal = this.toggleModal.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
-  
     this.state = {
       isMenuOpen: false,
       isModalOpen: true,
@@ -42,8 +41,6 @@ class Header extends Component {
         isModalOpen: !this.state.isModalOpen    
     });
   }
-
-  
 
   render () {
     return (

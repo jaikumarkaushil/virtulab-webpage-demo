@@ -1,18 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useForm } from 'react-hook-form';
 import { FormGroup, Col } from 'reactstrap';
 
 
 function Contact (props) {
 
+
     // below will keep track the submitted data 
-    const { register, handleSubmit, errors} = useForm();
+    const { register, handleSubmit, errors, watch } = useForm();
     const onSubmit = (data) => {
         console.log(data);
     };
+    const inputValues = watch();
+    inputValues.userCategory = props.userCategory;
 
     return (
         <section id="contact" className="d-none d-md-flex flex-column justify-content-center align-items-center">
+            {console.log(inputValues.userCategory)}
             <div className="side-stand">
                 <img src="assets/images/contact-stand.png" alt="stand.png" />
                 <img src="assets/images/contact_stand_bottom.png" alt="stand_bottom.png" />
