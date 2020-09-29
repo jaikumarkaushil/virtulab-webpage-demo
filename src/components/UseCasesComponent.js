@@ -12,24 +12,11 @@ import AOS from 'aos';
 
 function UseCases() {
     const [slide, setCurrentSlide] = useState({currentSlide: 0});
-    // const [hover, setHover] = useState({hoverCard: false});
     AOS.init();
 
     useEffect(() => {
         AOS.refresh(); 
     })
-    // function toggleHover(e) {
-    //     let event = e.target.dataset.event;
-    //     setHover({
-    //         hoverCard: hover.hoverCard === event ? false : (event)
-    //     })
-    // }
-    // function leaveHover(e) {
-    //     let event = e.target.dataset.event;
-    //     setHover({
-    //         hoverCard: hover.hoverCard === event ? null : event
-    //     })
-    // }
     var settings = {
         infinite: true,
         slidesToShow: 5,

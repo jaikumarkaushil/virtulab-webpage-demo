@@ -198,7 +198,7 @@ class Robot extends Component {
             onMouseMove={this.handleMouseMove}
             onMouseLeave={this.handleMouseLeave}>
                 <div className="photo-stand">
-                    <img src="/assets/images/Robo-1_1.png" alt="stnad.ng"/>
+                    <img src={this.props.roboStand} alt="stand.ng"/>
                 </div>
                 <div className="photo-stand-bottom">
                     <img src="/assets/images/stand-bottom.png" alt="group.png"/>
@@ -260,7 +260,7 @@ class SliderComponent extends Component {
                                 </Col>
                             </Row>
                             <div className="robot-stand">
-                                <Robot/>
+                                <Robot roboStand={carousel.roboStand}/>
                             </div>
                         </div>
                     )
