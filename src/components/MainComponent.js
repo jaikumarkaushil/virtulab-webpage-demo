@@ -12,7 +12,7 @@ const Main = (props) => {
     return (
       <div>
         <Suspense fallback={<Loading/>}>
-          <Header />
+          <Header/>
               <Switch>
                 <Route path="/home" component={() => <Home />} />
                 <Redirect to="/home"/>

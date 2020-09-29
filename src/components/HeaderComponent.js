@@ -9,6 +9,7 @@ class Header extends Component {
 
     this.toggleModal = this.toggleModal.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
+  
     this.state = {
       isMenuOpen: false,
       isModalOpen: true,
@@ -42,9 +43,10 @@ class Header extends Component {
     });
   }
 
+  
+
   render () {
     return (
-      <div>
         <Navbar dark fixed="top" id={this.state.status === "scrolled" ? "header-color" : "header"} expand="md">
           <NavbarBrand href="/" className="p-0 m-0 order-1">
             <img className="d-block d-md-none" src="assets/images/VirtuLab by DD Icon_White png 1@2x.svg" alt="brand-logo.svg"/>
@@ -53,30 +55,29 @@ class Header extends Component {
           <Collapse isOpen={this.state.isMenuOpen} navbar className="order-5 order-md-2 flex-row align-items-center justify-content-end">
             <Nav navbar className="mt-3 mt-md-0 d-flex flex-row justify-content-between">
               <NavItem>
-                <Link smooth={true} offset={-70} to="use-cases" duration={2000} className="header-link">USE CASE</Link>
+                <Link onClick={window.innerWidth<576 ? this.toggleMenu : null } smooth={true} offset={-95} to="use-cases" duration={2000} className="header-link">USE CASE</Link>
               </NavItem>
               <NavItem>
-                <Link smooth={true} offset={-81} to="features" duration={2000} className="header-link">FEATURES</Link>
+                <Link onClick={window.innerWidth<576 ? this.toggleMenu : null } smooth={true} offset={-90} to="features" duration={2000} className="header-link">FEATURES</Link>
               </NavItem>
               <NavItem>
-                <Link smooth={true} to="FAQs" duration={2000} className="header-link">FAQ</Link>
+                <Link onClick={window.innerWidth<576 ? this.toggleMenu : null } smooth={true} offset={-20} to="FAQs" duration={2000} className="header-link">FAQ</Link>
               </NavItem>
               <NavItem>
-                <Link smooth={true} to="contact" duration={2000} className="header-link">CONTACT</Link>
+                <Link onClick={window.innerWidth<576 ? this.toggleMenu : null } smooth={true} to="contact" duration={2000} className="header-link">CONTACT</Link>
               </NavItem>
             </Nav>
           </Collapse>
-          <Link smooth={true} to="/" duration={2000} className="order-2 order-md-3 headerbutton-white">TEST DRIVE</Link>
-          <Link smooth={true} to="/"  duration={2000} className="order-3 order-md-4 headerbutton-blue"><span className="pl-3 pl-md-0">BUY</span></Link>
+          <Link smooth={true} to="contact" duration={2000} className="order-2 order-md-3 headerbutton-white">TEST DRIVE</Link>
+          <Link smooth={true} to="contact"  duration={2000} className="order-3 order-md-4 headerbutton-blue"><span className="pl-3 pl-md-0">BUY</span></Link>
           <NavbarToggler onClick={this.toggleMenu} className="order-4"/>
+          {/* <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+            <ModalHeader toggle={this.toggleModal}>Virtulab Welcomes You!</ModalHeader>
+            <ModalBody>
+                <p >Hi! Welcome</p>
+            </ModalBody>
+          </Modal> */}
         </Navbar>
-      {/* <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-        <ModalHeader toggle={this.toggleModal}>Virtulab Welcomes You!</ModalHeader>
-        <ModalBody>
-            <p >Hi! Welcome</p>
-        </ModalBody>
-      </Modal> */}
-      </div>
     );
   }
 }

@@ -4,11 +4,9 @@ import Main from './components/MainComponent';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter> 
-          <Main />
-        </BrowserRouter>
-    </div>
+    <BrowserRouter> 
+      <Main />
+    </BrowserRouter>
   );
 }
 

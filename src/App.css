@@ -259,18 +259,16 @@ transition: all 300ms ease-out;
   width: 100vw;
 }
 
-.carousel-item {
-max-height: 800px;
-height: 100%;
-position: relative;
+.slider-item {
+  height:976px;
 }
 
 .carousel-background {
-background: linear-gradient(101.52deg, #6830C5 14.63%, #0D38A6 60.61%, #1654F2 73.56%, #D92C6B 100.35%);
-width:100%;
-height: 656px;
-position: relative;
-z-index: -3;
+  background: linear-gradient(101.52deg, #6830C5 14.63%, #0D38A6 60.61%, #1654F2 73.56%, #D92C6B 100.35%);
+  width:100%;
+  height: 656px;
+  position: absolute;
+  z-index: -3;
 }
 
 
@@ -314,10 +312,17 @@ z-index: -2;
   padding-left:15px;
 }
 
+/* robot */
+.robot-stand {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
 
 .photo-stand {
   position: relative;
-   top: -576px;
+   top: 65px;
   left:63.33%;
   z-index:3;
   width: max-content;
@@ -331,13 +336,13 @@ z-index: -2;
 }
 .ellipse-photo-stand-bottom {
   position: relative;
-  top: -87px;
+  top: 30px;
   left: 59.51%;
   height: 91px;
   z-index: -1;
   width: 259px;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.7;
   background: radial-gradient(62.09% 62.09% at 50% 50%, rgba(217, 0, 213, 0.7) 0%, rgba(36, 34, 137, 0.4) 100%);
 }
 
@@ -345,7 +350,7 @@ z-index: -2;
   .carousel-background {
     height: 596px;
   }
-  .carousel-item {
+  .slider-item {
     max-height: 728px;
   }
   .carousel-text {
@@ -446,7 +451,7 @@ z-index: -2;
 
 /* use-cases */
 #use-cases {
-  margin: -63px auto auto 110px;
+  margin: -91px 110px 0;
 }
 .use-case-cards {
   margin-top: 40.5px;
@@ -713,7 +718,7 @@ background-clip: text ;
   }
   .featureNumber {
     font-size: 150px;
-    line-height: 90px;
+    line-height: 100%;
     right: 0;
   }
   .buttons {
@@ -985,7 +990,7 @@ input[type=radio]:checked + label:after {
 }
 
 #footer {
-  position: relative;
+  position: absolute;
   margin-top: -76px;
   background-color: rgb(29,27,110);
   z-index: -1;

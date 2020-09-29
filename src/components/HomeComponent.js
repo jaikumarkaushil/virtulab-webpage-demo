@@ -10,7 +10,7 @@ import Contact from './ContactComponent';
 const Home = () => {
 
     return (
-        <div className="homepage">
+        <div id="homepage">
             <SliderComponent/>
             <UseCases/>
             <ProductFeatures/>

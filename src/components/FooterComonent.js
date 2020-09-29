@@ -7,9 +7,9 @@ function Footer(props) {
             <div className="row justify-content-center m-0">             
                 <div className="col-6 d-flex align-items-center justify-content-around">
                     <img src="assets/images/VirtuLab2.png" alt="logo.png" />
-                    <Link to="use-cases" smooth={true} duration={2000}>Use Cases</Link>
-                    <Link to="features" smooth={true} duration={2000}>Features</Link>
-                    <Link to="FAQs" smooth={true} duration={2000}>FAQs</Link>
+                    <Link to="use-cases" smooth={true} duration={2000} offset={-95}>Use Cases</Link>
+                    <Link to="features" smooth={true} duration={2000} offset={-90}>Features</Link>
+                    <Link to="FAQs" smooth={true} duration={2000} offset={-20}>FAQs</Link>
                     <Link to="contact" smooth={true} duration={2000}>Contact</Link>
                 </div>
                 <div className="col-6 d-flex align-items-center justify-content-end">

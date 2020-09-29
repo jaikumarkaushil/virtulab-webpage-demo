@@ -94,7 +94,7 @@ function UseCases() {
                                     </CardBody>
                                 </div>
                                 <CardText>
-                                    <span class="arrow">
+                                    <span className="arrow">
                                         <img src="assets/images/usecase-arrow@2x.svg" alt="arrow" />
                                         <img src="assets/images/usecase-arrow@2x.svg" alt="arrow" />
                                     </span>
