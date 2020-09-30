@@ -35,7 +35,7 @@ export const Carousels = [
         id: 4,
         heading: "Be at Events across the World",
         subheading: "From your office desk",
-        images: "/assets/images/slider-events.jpg",
+        images: "/assets/images/shutterstock_371017109_5.webp",
         roboStand: "/assets/images/Robo-1_1.png",
         roboStandBottom: "/assets/images/stand-bottom.png"
     }
