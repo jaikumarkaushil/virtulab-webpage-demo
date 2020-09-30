@@ -1,12 +1,15 @@
-
+html {
+  max-width: 1440px;
+  width:100%;
+}
 
 body {
   background-color: rgb(36,34,137);
   color: rgb(255, 255, 255);
+  font-family: 'Roboto';
   max-width: 1440px;
   width:100%;
   margin: auto;
-  font-family: 'Roboto';
 }
 .colortheme-orange {
   color: #F08310;
@@ -253,7 +256,13 @@ transition: all 300ms ease-out;
 
 
 
+/* homepage */
+#homepage {
+  width:100vw;
+}
+
 /* carousel*/
+
 
 #top-carousel {
   width: 100vw;
@@ -265,7 +274,7 @@ transition: all 300ms ease-out;
 
 .carousel-background {
   background: linear-gradient(101.52deg, #6830C5 14.63%, #0D38A6 60.61%, #1654F2 73.56%, #D92C6B 100.35%);
-  width:100%;
+  width:100vw;
   height: 656px;
   position: absolute;
   z-index: -3;
@@ -275,6 +284,7 @@ transition: all 300ms ease-out;
 /* text part */
 
 .carousel-text {
+  position: relative;
 margin-top: 175px;
 margin-left: 29.6%;
 font-style: normal;
@@ -302,22 +312,28 @@ margin-top: 6px;
 /* masked image part */
 
 .mask-images {
-width: 881px;
+width: 50vw;
+height:656px;
 opacity: 0.38;
 filter: contrast(1.3) brightness(1.1);
 background-repeat: no-repeat;
 z-index: -2;
 }
 .mask-images img {
-  padding-left:15px;
+  width:inherit;
+  height:inherit;
 }
 
 /* robot */
 .robot-stand {
   position: absolute;
   top: 0;
-  height: 100%;
   width: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+.robot {
+  height: 982px;
 }
 
 .photo-stand {
@@ -365,9 +381,11 @@ z-index: -2;
   .carousel-text-subheading {
     display: none;
   }
+  .mask-images {
+    width:100vw;
+  }
   .mask-images img {
     height: 376px;
-    padding-left:0;
   }
   .photo-stand img {
     width: 112.5px;
@@ -451,7 +469,7 @@ z-index: -2;
 
 /* use-cases */
 #use-cases {
-  margin: -91px auto 0 110px;
+  margin: -91px 118.5px 0;
 }
 .use-case-cards {
   margin-top: 40.5px;
@@ -590,6 +608,7 @@ align-items: center;
     margin-left: 20px;
     padding-right:20px;
     overflow: hidden;
+    margin-right: auto;
   }
   .use-case-cards {
     width: 500px;
@@ -835,8 +854,10 @@ background-clip: text ;
 .double-comma-quotation {
   /* position */
   position: absolute;
-  font-size: 383.75px;
-  left: 50px; 
+  font-size: 600px;
+  top:5px;
+  left: 5%; 
+  line-height: 100%;
   z-index: -1;      
   /* font color */
   background-image: linear-gradient(160.65deg, #D92C6B 12.62%, #306AFF 33.51%, #1D4FD1 55.92%);

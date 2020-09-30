@@ -58,7 +58,7 @@ class Robot extends Component {
             perspective: 1000,
             easing: 'cubic-bezier(.03,.98,.52,.99)',
             scale: '1.1',
-            speed: '2000',
+            speed: '3000',
             transition: true,
             axis: null,
             reset: true
@@ -101,6 +101,18 @@ class Robot extends Component {
                 transform: "rotate(0.001deg) translate3d(0px,0px,0px)",
                 transformStyle: "preserve-3d",
                 backfaceVisibility: "hidden",
+                WebkitTransform: "rotate(0.001deg) translate3d(0px,0px,0px)",
+                WebkitTransformStyle: "preserve-3d",
+                WebkitBackfaceVisibility: "hidden",
+                MozTransform: "rotate(0.001deg) translate3d(0px,0px,0px)",
+                MozTransformStyle: "preserve-3d",
+                MozbackfaceVisibility: "hidden",
+                MsTransform: "rotate(0.001deg) translate3d(0px,0px,0px)",
+                MsTransformStyle: "preserve-3d",
+                MsbackfaceVisibility: "hidden",
+                OTransform: "rotate(0.001deg) translate3d(0px,0px,0px)",
+                OTransformStyle: "preserve-3d",
+                OBackfaceVisibility: "hidden",
             }
             }))
         })
@@ -191,18 +203,55 @@ class Robot extends Component {
             ...this.props.style,
             ...this.state.style
           }
+        var settings = {
+            dots: false,
+            slidesToShow: 1,
+            arrows: false,
+            autoplay:true,
+            pauseOnHover: false,
+            autoplaySpeed:3000,
+            slidesToScroll: 1,
+            fade: true,
+            infinite: true,
+            nextArrow: <NextArrow />,
+            prevArrow: <PrevArrow />,
+            responsive: [
+                {
+                    breakpoint: 576,
+                    settings: {
+                        dots: false,
+                        slidesToShow: 1,
+                        arrows: false,
+                        autoplay:true,
+                        pauseOnHover: false,
+                        autoplaySpeed:3000,
+                        slidesToScroll: 1,
+                        fade: true,
+                        infinite: true,
+                        }
+                    },
+            ]
+        };
         return (
-            <div className="robot" data-depth={0.2} style={style}
-            onMouseEnter={this.handleMouseEnter}
-            onMouseMove={this.handleMouseMove}
-            onMouseLeave={this.handleMouseLeave}>
-                <div className="photo-stand">
-                    <img src={this.props.roboStand} alt="stand.ng"/>
-                </div>
-                <div className="photo-stand-bottom">
-                    <img src="/assets/images/stand-bottom.png" alt="group.png"/>
-                </div>
-                <div className="ellipse-photo-stand-bottom"></div>
+            <div className="robot-stand" data-depth={0.2} style={style}
+                        onMouseEnter={this.handleMouseEnter}
+                        onMouseMove={this.handleMouseMove}
+                        onMouseLeave={this.handleMouseLeave}>
+            <Slider {...settings}>
+                {Carousels.map((carousel) => {
+                    return(
+                        <div className="robot">
+                            <div className="photo-stand">
+                                <img src={carousel.roboStand} alt="stand.ng"/>
+                            </div>
+                            <div className="photo-stand-bottom">
+                                <img src="/assets/images/stand-bottom.png"   alt="group.png"/>
+                            </div>
+                            <div className="ellipse-photo-stand-bottom"></div>
+                        </div>
+                    )
+                })}
+            </Slider>
             </div>
         )
     }
@@ -216,6 +265,7 @@ class SliderComponent extends Component {
         slidesToShow: 1,
         arrows: true,
         autoplay:true,
+        pauseOnHover: false,
         autoplaySpeed:3000,
         slidesToScroll: 1,
         fade: true,
@@ -230,6 +280,7 @@ class SliderComponent extends Component {
                     slidesToShow: 1,
                     arrows: false,
                     autoplay:true,
+                    pauseOnHover: false,
                     autoplaySpeed:3000,
                     slidesToScroll: 1,
                     fade: true,
@@ -245,7 +296,7 @@ class SliderComponent extends Component {
                 {Carousels.map((carousel) => {
                     return(
                         <div key={carousel.id} className="slider-item">
-                            <Row>
+                            <Row className="mx-0">
                                 <Col xs={12} md={6}>
                                 <div className="carousel-text">
                                     <p className="carousel-text-heading">{carousel.heading}</p>
@@ -258,13 +309,12 @@ class SliderComponent extends Component {
                                     </div>
                                 </Col>
                             </Row>
-                            <div className="robot-stand">
-                                <Robot roboStand={carousel.roboStand}/>
-                            </div>
+                            
                         </div>
                     )
                 })}
             </Slider>
+            <Robot/>
         </section>
     )
 }
